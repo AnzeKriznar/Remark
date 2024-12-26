@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+    <title>Preučevanje Hamiltonovih poti v tabeli</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+  
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+  
+      /* Dodaj CSS za ozadje */
+      .remark-slide-container {
+        background-image: url('ozadje.jpg'); /* Pot do tvoje slike ozadja */
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  
+    <textarea id="source">
+
+layout: true
+background-image: url(green-spiral-pattern.jpg)
+
+---
+
+class: center, middle
+
+# Hamiltonian Path Puzzle
+
+### Preučevanje Hamiltonovih poti v tabeli
+
+
+
+???
+Na tej predstavitvi bomo raziskali problem Hamiltonove poti, njegov zgodovinski kontekst, algoritme za reševanje in praktične aplikacije.
+
+
+<!-- nov slide -->
+---
+
+# Kaj je za nas Hamiltonova pot v tabeli?
+
+- **Vsak kvadratek** v tabeli moramo obiskati **natanko enkrat**.
+- Na **obarvane** kvadratke lahko stopimo, če in samo če je **število korakov**, ki smo jih naredili **praštevilno**.
+- Premikamo se lahko le v štirih smereh: **levo, desno, navzgor in navzdol**.
+
+
+
+<!-- nov slide z obstoječo vsebino -->
+---
+
+
+<!-- prepreči, da bi se nadaljevanje štelo kot nov slide -->
+
+### Spodaj je podan primer 7x7 tabele poskusimo, ga rešiti:
+
+
+<!-- besedilo ali elemente lahko poravnamo z .left[...], .center[...] ali .right[...] -->
+.center[<img src="primer1.png" height="190">]
+
+--
+count:false
+* Kateri par praštevil je numerično ena cifra narazen? Kaj to pomeni za rdeče kvadratke?
+
+--
+count:false
+Rešitev *(Spodaj je navedena ena izmed možnih rešitev. Rešitev ni enolična.)*:
+.center[<img src="primer.png" height="190">]
+
+
+---
+# Preprost rekurzivni backtracking algoritem
+
+- Algoritem raziskuje vse možne rešitve s pomočjo rekurzije.
+- Če naleti na slepo ulico, "vrne nazaj" (backtracks) in poskusi drugo možnost.
+- Postopek ponavlja, dokler ne najde rešitve ali izčrpa vseh možnosti.
+--
+name: ime
+count:false
+## Kako deluje?
+
+1. **Raziskovanje**: Algoritem izbira možnosti, korak za korakom.
+2. **Backtracking**: Ko izbira vodi do napake, se vrne na prejšnji korak.
+3. **Konec algoritma**: Rešitev je najdena, ko so izpolnjeni vsi pogoji, ali pa ni več možnih poti.
+
+---
+
+template: nadaljnje-moznosti
+
+
+### Za domačo vajo poskusite sprogramirati [`algoritem`](#ime) in rešite naslednje primere:
+
+<div style="display: flex; justify-content: space-evenly; align-items: center;">
+  <div class="left" style="padding: 5px;">
+    <img src="primer2.png" height="290"> <!-- Povečano za 1.5x -->
+  </div>
+  <div class="right" style="padding: 5px;">
+    <img src="primer3.png" height="270"> <!-- Povečano za 1.5x -->
+  </div>
+</div>
+---
+
+# Viri
+
+- Slike in besedilo povzeto po: [DataGenetics - October 2021 Blog](https://datagenetics.com/blog/october12021/index.html)
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+  </body>
+</html>
