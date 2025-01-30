@@ -1,0 +1,79 @@
+/* Osnovni slog za telo strani */
+body {
+    font-family: 'Patrick Hand', cursive; /* Pisano pisanje */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Slog za remark container, vključno z ozadjem */
+.remark-slide-container {
+    background-image: url('ozadje.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+/* Slog za naslove h1, h2, h3 */
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive; /* Pisana pisava za naslove */
+    color: #FF6347;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Slog za besedilo in seznam */
+p, li {
+    font-family: 'Patrick Hand', cursive; /* Pisano besedilo na diapozitivih */
+    color: #333;
+    font-size: 1.2em;
+}
+
+/* Animacija za remark slide */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.remark-slide-container {
+    animation: fadeIn 1s ease-out;
+}
+button {
+    background-color: rgb(145, 199, 177);
+    margin: 5px;
+    border: none;
+    padding: 5px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  footer {
+    text-align: center;
+  }
+  
+  .razdelek {
+    background-color: rgb(241, 247, 237);
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+    margin: 20px;
+  }
+
+
+
+
+
+
+

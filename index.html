@@ -2,6 +2,7 @@
 <head>
     <title>Preučevanje Hamiltonovih poti v tabeli</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
@@ -20,7 +21,17 @@
         background-size: cover;
         background-position: center;
       }
+    
     </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vljuden gumb</title>
+    <script>
+      function klik() {
+        // Najdemo celico, kamor bomo zapisali sporočilo
+        document.getElementById("klik-na-gumb").innerHTML = "<p>Dovolj za danes</p>";
+      }
+    </script>
   </head>
   
     <textarea id="source">
@@ -112,6 +123,17 @@ template: nadaljnje-moznosti
 - Slike in besedilo povzeto po: [DataGenetics - October 2021 Blog](https://datagenetics.com/blog/october12021/index.html)
 
 
+
+
+<table border="1">
+  <tr>
+    <td><button onclick="klik()">Klikni me.</button></td>
+    <td id="klik-na-gumb"></td>
+  </tr>
+</table>
+
+
+
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
@@ -133,3 +155,4 @@ template: nadaljnje-moznosti
     </script>
   </body>
 </html>
+
