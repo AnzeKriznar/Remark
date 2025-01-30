@@ -25,7 +25,6 @@ Ta projekt vsebuje interaktivno predstavitev o Hamiltonovih poteh v mreži, nare
 - **`.remark-slide-container`** – Nastavi ozadje diapozitivov (`background-image`).
 - **`button { background-color, padding, border-radius }`** – Oblikovanje gumbov.
 - **`@keyframes fadeIn`** – Animacija za prehod diapozitivov (`opacity`, `transform`).
-- **`.razdelek { background-color, border-radius, padding, margin }`** – Oblikovanje odsekov.
 
 ### 3. JavaScript
 - **Funkcija `klik()`** – Spreminja vsebino `<td>` ob kliku na gumb:
